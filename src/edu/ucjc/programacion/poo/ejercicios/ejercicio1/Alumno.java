@@ -50,7 +50,13 @@ public class Alumno {
 		this.email = email;
 		this.dni = dni;
 	}
-
+	public Alumno(String nombre, String apellidos, int edad, String dni) {
+		super();
+		this.nombre = nombre;
+		this.apellidos = apellidos;
+		this.edad = edad;
+		this.dni = dni;
+	}
 	//Métodos get y set
 	public String getNombre() {
 		return nombre;
