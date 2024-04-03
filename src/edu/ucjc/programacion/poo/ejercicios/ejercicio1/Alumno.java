@@ -2,7 +2,7 @@ package edu.ucjc.programacion.poo.ejercicios.ejercicio1;
 
 //POJO:Plain Old Java Object
 public class Alumno {
-	//Variables de instancia
+	//Variables de instancias
 	private String nombre;
 	private String apellidos;
 	private int edad;
