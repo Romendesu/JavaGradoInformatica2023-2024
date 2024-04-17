@@ -1,24 +1,31 @@
 package edu.ucjc.programacion.poo.herencia.ejercicioAbstracto;
 
-public class CocheElectrico extends Coche {
-	//Atributo
-	private int velocidadRecarga;
-	//Constructor
-	public CocheElectrico(String marca, String modelo, int fabricacion, String matricula, int numeroPuertas,
-			String combustible, int velocidadRecarga) {
-		super(marca, modelo, fabricacion, matricula, numeroPuertas, combustible);
-		this.velocidadRecarga = velocidadRecarga;
-		// TODO Auto-generated constructor stub
-	}
-	//Getter and Setter
-	public int getVelocidadRecarga() {
-		return velocidadRecarga;
+public final class CocheElectrico extends Coche {
+
+	private double velocidadCarga;
+	
+	public CocheElectrico(String marca, String modelo, int anioFabricacion, String matricula, int numPuertas,
+			String tipoCombustible, double velocidadCarga) {
+		super(marca, modelo, anioFabricacion, matricula, 
+				numPuertas, tipoCombustible);
+		this.velocidadCarga = velocidadCarga;
 	}
 
-	public void setVelocidadRecarga(int velocidadRecarga) {
-		this.velocidadRecarga = velocidadRecarga;
+	public double getVelocidadCarga() {
+		return velocidadCarga;
 	}
+	public void setVelocidadCarga(double velocidadCarga) {
+		this.velocidadCarga = velocidadCarga;
+	}
+
+
 	public void recargar() {
-		System.out.println("El coche se esta recargando con una velocidad de recarga de" + velocidadRecarga +"m/s");
+		System.out.println("El coche electrico con matricula "+ getMatricula() 
+		+ "está recargando");
+	}
+	
+	@Override
+	public void arrancar () {
+		System.out.println("El coche "+this.getMatricula() + " esta arrancando pulsando el botón");
 	}
 }

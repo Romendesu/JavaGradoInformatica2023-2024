@@ -1,42 +1,49 @@
 package edu.ucjc.programacion.poo.herencia.ejercicioAbstracto;
 
-public class Moto extends Vehiculo {
-	//Atributos
-	private String matricula;
+public class Moto extends VehiculosMotorizados {
+
 	private int cilindrada;
-	//
-	public Moto(String marca, String modelo, int fabricacion, String matricula, int cilindrada) {
-		super(marca, modelo, fabricacion);
-		this.matricula = matricula;
-		this.cilindrada = cilindrada;
+	
+	public Moto(String marca, String modelo, int anioFabricacion, String matricula) {
+		super(marca, modelo, anioFabricacion, matricula);
 		// TODO Auto-generated constructor stub
-	//Getter and Setter
 	}
-	public String getMatricula() {
-		return matricula;
+
+	public Moto(String marca, String modelo, int anioFabricacion, 
+			String matricula, int cilindrada) {
+		super(marca, modelo, anioFabricacion, matricula);
+		this.cilindrada = cilindrada;
 	}
-	public void setMatricula(String matricula) {
-		this.matricula = matricula;
-	}
+
 	public int getCilindrada() {
 		return cilindrada;
 	}
+
 	public void setCilindrada(int cilindrada) {
 		this.cilindrada = cilindrada;
 	}
-	//toString
+	
+	public void hacerCaballito() {
+		System.out.println("La moto con matricula "+getMatricula());
+	}
+	
 	@Override
-	public String toString() {
-		return "Moto [matricula=" + matricula + ", cilindrada=" + cilindrada + ", getMarca()=" + getMarca()
-				+ ", getModelo()=" + getModelo() + ", getFabricacion()=" + getFabricacion() + ", toString()="
-				+ super.toString() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode() + "]";
-	}
-	//metodos acelerar y frenar
 	public void acelerar() {
-		System.out.println("La moto esta acelerando");
-	}
-	public void frenar() {
-		System.out.println("La moto esta frenando");
+		System.out.println("La moto "+this.getMatricula() + " esta acelerando");
+		
 	}
 
+	@Override
+	public void frenar() {
+		System.out.println("La moto "+this.getMatricula() + " esta acelerando");
+	}
+
+	@Override
+	public String toString() {
+		return "Moto [cilindrada=" + cilindrada + ", matricula()=" 
+				+ getMatricula() + ", año de fabricacion: "
+				+ getAnioFabricacion() + "]";
+	}
+
+	
 }
