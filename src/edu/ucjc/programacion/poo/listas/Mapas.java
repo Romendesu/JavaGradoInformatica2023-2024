@@ -20,10 +20,6 @@ public class Mapas {
 		coches.put(coche3.getMatricula(), coche3);
 		coches.put(coche4.getMatricula(), coche4);
 		
-		coches.get("2222DEF");
-		
-		System.out.println(coches);
-
-		
+		coches.get("2222DEF");		
 	}
 } 
